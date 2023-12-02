@@ -1,4 +1,5 @@
 // import Banner from "../Component/Banner/Banner";
+import AboutSection from "../Component/AboutSection/AboutSection";
 import BannerTwo from "../Component/BannerTwo/BannerTwo";
 
 
@@ -8,6 +9,7 @@ const Home = () => {
         <div>            
             {/* <Banner></Banner> */}
             <BannerTwo></BannerTwo>
+            <AboutSection></AboutSection>
         </div>
     );
 };

@@ -29,17 +29,17 @@ const BannerTwo = () => {
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide number-slide1 relative">
             <img src={banner1} alt="" />
-            <div className="rounded-lg p-5 justify-start items-start absolute space-y-4  bg-gradient-to-r from-[#313030] to-[#15151500]">
-              <h2 className="text-4xl">Affordable Price For Car Servicing</h2>
-              <h2 className="text-xl">
+            <div className="banner-text rounded-lg p-5 justify-start items-start absolute lg:space-y-4 space-y-2  bg-gradient-to-r from-[#313030] to-[#15151500]">
+              <h2 className="lg:text-4xl text-lg font-medium">Affordable Price For Car Servicing</h2>
+              <h2 className="lg:text-xl text-sm font-light text-slate-400">
                 There are many variations of passages of available, <br /> but the
                 majority have suffered alteration in some form
               </h2>
-              <div className=" flex gap-5">
-                <div className="btn btn-warning  btn-outline ">
+              <div className=" flex gap-5 justify-between">
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-warning  btn-outline ">
                   Discover More
                 </div>
-                <div className="btn btn-secondary  btn-outline">
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-secondary  btn-outline">
                   Latest Project{" "}
                 </div>
               </div>
@@ -47,18 +47,93 @@ const BannerTwo = () => {
           </div>
           <div className="keen-slider__slide number-slide2">
             <img src={banner2} alt="" />
+            <div className="banner-text rounded-lg p-5 justify-start items-start absolute lg:space-y-4 space-y-2  bg-gradient-to-r from-[#313030] to-[#15151500]">
+              <h2 className="lg:text-4xl text-lg font-medium">Affordable Price For Car Servicing</h2>
+              <h2 className="lg:text-xl text-sm font-light text-slate-400">
+                There are many variations of passages of available, <br /> but the
+                majority have suffered alteration in some form
+              </h2>
+              <div className=" flex gap-5 justify-between">
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-warning  btn-outline ">
+                  Discover More
+                </div>
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-secondary  btn-outline">
+                  Latest Project{" "}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="keen-slider__slide number-slide3">
             <img src={banner3} alt="" />
+            <div className="banner-text rounded-lg p-5 justify-start items-start absolute lg:space-y-4 space-y-2  bg-gradient-to-r from-[#313030] to-[#15151500]">
+              <h2 className="lg:text-4xl text-lg font-medium">Affordable Price For Car Servicing</h2>
+              <h2 className="lg:text-xl text-sm font-light text-slate-400">
+                There are many variations of passages of available, <br /> but the
+                majority have suffered alteration in some form
+              </h2>
+              <div className=" flex gap-5 justify-between">
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-warning  btn-outline ">
+                  Discover More
+                </div>
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-secondary  btn-outline">
+                  Latest Project{" "}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="keen-slider__slide number-slide4">
             <img src={banner4} alt="" />
+            <div className="banner-text rounded-lg p-5 justify-start items-start absolute lg:space-y-4 space-y-2  bg-gradient-to-r from-[#313030] to-[#15151500]">
+              <h2 className="lg:text-4xl text-lg font-medium">Affordable Price For Car Servicing</h2>
+              <h2 className="lg:text-xl text-sm font-light text-slate-400">
+                There are many variations of passages of available, <br /> but the
+                majority have suffered alteration in some form
+              </h2>
+              <div className=" flex gap-5 justify-between">
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-warning  btn-outline ">
+                  Discover More
+                </div>
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-secondary  btn-outline">
+                  Latest Project{" "}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="keen-slider__slide number-slide5">
             <img src={banner5} alt="" />
+            <div className="banner-text rounded-lg p-5 justify-start items-start absolute lg:space-y-4 space-y-2  bg-gradient-to-r from-[#313030] to-[#15151500]">
+              <h2 className="lg:text-4xl text-lg font-medium">Affordable Price For Car Servicing</h2>
+              <h2 className="lg:text-xl text-sm font-light text-slate-400">
+                There are many variations of passages of available, <br /> but the
+                majority have suffered alteration in some form
+              </h2>
+              <div className=" flex gap-5 justify-between">
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-warning  btn-outline ">
+                  Discover More
+                </div>
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-secondary  btn-outline">
+                  Latest Project{" "}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="keen-slider__slide number-slide6">
             <img src={banner6} alt="" />
+            <div className="banner-text rounded-lg p-5 justify-start items-start absolute lg:space-y-4 space-y-2  bg-gradient-to-r from-[#313030] to-[#15151500]">
+              <h2 className="lg:text-4xl text-lg font-medium">Affordable Price For Car Servicing</h2>
+              <h2 className="lg:text-xl text-sm font-light text-slate-400">
+                There are many variations of passages of available, <br /> but the
+                majority have suffered alteration in some form
+              </h2>
+              <div className=" flex gap-5 justify-between">
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-warning  btn-outline ">
+                  Discover More
+                </div>
+                <div className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-secondary  btn-outline">
+                  Latest Project{" "}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {loaded && instanceRef.current && (
