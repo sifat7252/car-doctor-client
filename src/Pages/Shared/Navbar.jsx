@@ -35,8 +35,8 @@ const Navbar = () => {
           {
             // !user && 
             <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-orange-700 to-orange-500">
-            <Link to={"/register"} className="flex items-center">
-              Register
+            <Link to={"/signUp"} className="flex items-center">
+              SignUp
             </Link>
           </li>
           }

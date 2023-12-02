@@ -1,4 +1,5 @@
-import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash,  } from 'react-icons/fa';
+// import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -19,16 +20,16 @@ const handleLogin = e =>{
     const newUser = {email, password}
     console.log({newUser});
 
-    const handleGithubLogin = () => {
+    // const handleGithubLogin = () => {
 
-    }
-    const handleGoogleLogin = () => {
+    // }
+    // const handleGoogleLogin = () => {
 
-    }
+    // }
 }
     return (
         <div>
-            <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-center mt-8 bg-base-200 rounded-xl p-4 mb-2  ">
+            <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-center mt-8 bg-base-200 rounded-xl p-4 mb-2 border">
                 <div className="lg:ml-10"><img src={login} alt="" className="" /></div>
         <div className="relative mx-auto lg:flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-xl p-5 " data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
@@ -40,7 +41,7 @@ const handleLogin = e =>{
             Sign In
           </h4>
           <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-            Enter your Email and Password for log in.
+            Enter your Email and Password for log in or SignIN.
           </p>
           </div>
           <form onSubmit={handleLogin} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
@@ -78,12 +79,12 @@ const handleLogin = e =>{
             </button>
             <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
               New Here ?
-              <Link to="/register">
+              <Link to="/signUp">
                 <button
                   className=" btn-link font-medium text-orange-500 transition-colors hover:text-blue-700"
                   
                 >
-                  Register
+                  SignUp
                 </button>
               </Link>
             </p>
