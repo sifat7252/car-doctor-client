@@ -6,25 +6,25 @@ const Navbar = () => {
 
     const navLinks = (
         <>
-          <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text antialiased block bg-gradient-to-r from-violet-500 to-blue-900 ">
+          <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text antialiased block bg-gradient-to-r from-orange-700 to-orange-500 ">
             <Link to={"/"} className="flex items-center">
               Home
             </Link>
           </li>
-          <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
-            <Link to={"/rooms"} className="flex items-center">
-              Rooms
+          <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-orange-700 to-orange-500">
+            <Link to={"/services"} className="flex items-center">
+              Services
             </Link>
           </li>
           {
             // user && 
             <>
-            {/* <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
+            {/* <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-orange-700 to-orange-500">
             <Link to={"/addProduct"} className="flex items-center">
               Add Product
             </Link>
           </li> */}
-          <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
+          <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-orange-700 to-orange-500">
             <Link to={"/myBookings"} className="flex items-center">
               My Bookings
             </Link>
@@ -34,9 +34,17 @@ const Navbar = () => {
     
           {
             // !user && 
-            <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-violet-500 to-blue-900">
+            <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-orange-700 to-orange-500">
             <Link to={"/register"} className="flex items-center">
               Register
+            </Link>
+          </li>
+          }
+          {
+            // !user && 
+            <li className="p-1 font-sans text-sm md:text-base lg:text-base text-black lg:font-semibold md:font-medium font-normal     text-transparent bg-clip-text   bg-gradient-to-r from-orange-700 to-orange-500">
+            <Link to={"/signIn"} className="flex items-center">
+              SignIn
             </Link>
           </li>
           }
@@ -56,7 +64,7 @@ const Navbar = () => {
         {navLinks}
       </ul>
     </div>
-    <div className=""><img src={logo} alt="logo" className="n h-16 rounded-lg" /></div>
+    <div className=""><Link to={'/'}><img src={logo} alt="logo" className="n h-16 rounded-lg" /></Link></div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

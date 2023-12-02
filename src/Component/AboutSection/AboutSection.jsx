@@ -10,7 +10,7 @@ const AboutSection = () => {
                 <img src={img1} alt="" className="w-4/5 h-[475px] border" />
                 </div>
                 <div className="  relative bottom-60 left-72">
-                <img src={img2} alt="" className="w-1/2 h-[330px]" />
+                <img src={img2} alt="" className="w-1/2 border-8 border-white h-[330px]" />
                 </div>
             </div>
             <div className="about-texts border space-y-6">
