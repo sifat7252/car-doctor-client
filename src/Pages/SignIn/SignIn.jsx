@@ -37,7 +37,7 @@ const handleLogin = e =>{
         
           <div className=" flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center ">
-          <h4 className="flex justify-center items-center  font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-transparent text-orange-500 ">
+          <h4 className="flex justify-center items-center  font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased  text-orange-500 ">
             Sign In
           </h4>
           <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
