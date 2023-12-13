@@ -1,9 +1,13 @@
 import { FaEye, FaEyeSlash,  } from 'react-icons/fa';
-// import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import login from '../../assets/images/login/login.svg'
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2'
+import swal from 'sweetalert';
 
 
 
@@ -11,6 +15,12 @@ import login from '../../assets/images/login/login.svg'
 const SignIn = () => {
 
     const [showPasswordIcon, setShowPasswordIcon] = useState(false);
+    const { signIn, googleLogIn, githubLogIn } = useContext(AuthContext);
+    const [signInError, setSignInError] = useState('');
+    const [signInSuccessMessage, setSignInSuccessMessage] = useState('');
+    
+    const location = useLocation();
+     const navigate = useNavigate();
 
 const handleLogin = e =>{
     e.preventDefault();
@@ -20,13 +30,70 @@ const handleLogin = e =>{
     const newUser = {email, password}
     console.log({newUser});
 
-    // const handleGithubLogin = () => {
+    
 
-    // }
-    // const handleGoogleLogin = () => {
+     // ::: SIGN IN WITH EMAIL AND PASSWORD :::
+     signIn(email, password)
+     .then(result =>{
+       console.log(result.user)
+       setSignInSuccessMessage('Log in Successful')
+       Swal.fire({
+         title: 'Success',
+         text: 'User added successfully.',
+         icon: 'success',
+         confirmButtonText: 'Okay'
 
-    // }
+     })
+
+       // ::: NAVIGATING AFTER LOGIN 
+       navigate(location?.state ? location.state : '/');
+       
+     })
+     .catch(error=>{
+       console.error(error)
+       setSignInError("Your email or password is incorrect")
+       Swal.fire({
+         title: 'Error',
+         text: 'Your email or password is incorrect',
+         icon: 'error',
+         confirmButtonText: 'Okay'
+
+     })
+     })
+    }    
+     // ::: LOG IN WITH GOOGLE :::
+    const handleGoogleLogin = ()=> {
+      googleLogIn()
+      .then(result =>{
+        console.log(result)
+        setSignInSuccessMessage('Google Log In Successful')
+        swal("Congratulation !!", 'Google Log In Successful' || signInSuccessMessage , "success");
+      })
+      .catch(error=>{
+        setSignInError(error.message)
+        swal("Opps !!", signInError , "error");
+      });
+
+    };
+    
+    // LOG IN WITH GITHUB :::
+    const handleGithubLogin = ()=> {
+      githubLogIn()
+      .then(result =>{
+        console.log(result)
+        setSignInSuccessMessage('Github Log In Successful')
+        swal("Congratulation !!", 'Github Log In Successful'|| signInSuccessMessage , "success");
+      })
+      .catch(error=>{
+        setSignInError(error.message)
+        swal("Opps !!", signInError , "error");
+      })
+    
 }
+
+
+
+
     return (
         <div>
             <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-center mt-8 bg-base-200 rounded-xl p-4 mb-2 border">
@@ -90,11 +157,11 @@ const handleLogin = e =>{
             </p>
             <hr className="mt-4 bg-gradient-to-r from-orange-700  to-orange-500 h-1" />
             
-            {/* <div className="p-4">
+            <div className="p-4">
               
                 <button onClick={handleGoogleLogin} className='btn btn-outline flex text-sky-500 w-full m-2 mx-auto'><FaGoogle></FaGoogle> Google LogIn</button>
                 <button onClick={handleGithubLogin} className='btn btn-outline flex text-black-500 w-full m-2 mx-auto'><FaGithub></FaGithub> Github LogIn</button>
-            </div> */}
+            </div>
           </form>
           </div>
         </div>

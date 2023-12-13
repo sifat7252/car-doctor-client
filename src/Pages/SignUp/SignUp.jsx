@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import signup  from '../../assets/images/login/login.svg'
+import signUp  from '../../assets/images/login/login.svg'
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from 'sweetalert2'
 
 
 const SignUp = () => {
+
+    const {createUser} = useContext(AuthContext);
 
     const [showPasswordIcon, setShowPasswordIcon] = useState(false);
 
@@ -18,16 +22,30 @@ const SignUp = () => {
         // const accepted = form.checkbox.checked;
         const registerUser = {name, photoUrl, email, password}
         console.log( registerUser)
+
+        // create a new user by firebase
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            Swal.fire({
+              title: 'Success',
+              text: 'User added successfully.',
+              icon: 'success',
+              confirmButtonText: 'Okay'
+     
+          })
+        })
     }
     return (
         <div>
              <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-center mt-8 bg-base-200 rounded-xl p-4 mb-2 border ">
-                <div className="lg:ml-10"><img src={signup} alt="" className="" /></div>
+                <div className="lg:ml-10"><img src={signUp} alt="" className="" /></div>
       <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-lg p-8 " data-aos="flip-right"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="1000">
       <div className="flex flex-col justify-center items-center ">
-          <h4 className="flex justify-center items-center  font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased text-transparent text-orange-500 ">
+          <h4 className="flex justify-center items-center  font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased  text-orange-500 ">
             Sign Up
           </h4>
           <p className="mt-1 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
